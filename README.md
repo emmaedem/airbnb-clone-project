@@ -291,6 +291,50 @@ Together, these security layers help safeguard the Airbnb Clone backend from com
 
 
 
+## ⚙️ CI/CD Pipeline
+
+### 🚀 What is CI/CD?
+**CI/CD** stands for **Continuous Integration** and **Continuous Deployment (or Delivery)** — a process that automates the building, testing, and deployment of software.  
+It ensures that every time new code is added to the project, it is automatically tested and deployed without manual intervention, maintaining the integrity and reliability of the system.
+
+---
+
+### 🧠 Why It’s Important
+- **Consistency:** Every update goes through the same automated build and test process, reducing human errors.  
+- **Faster Development:** Developers can merge and deploy changes quickly without manual setup.  
+- **Quality Assurance:** Automated testing ensures that new updates don’t break existing functionality.  
+- **Scalability:** CI/CD makes it easy to deploy frequent updates, especially as the project grows in size and complexity.  
+
+---
+
+### 🧰 Tools Used in This Project
+**GitHub Actions:** Automates workflows such as testing, building, and deployment each time a new commit or pull request is made.  
+**Docker:** Used to containerize the application, ensuring that the environment remains consistent across development, testing, and production.  
+**PostgreSQL & Django Migrations:** Automatically runs database migrations during deployment to keep data structures in sync.  
+**Redis + Celery (Optional):** Background tasks (like sending emails) can also be triggered automatically through CI/CD pipelines.  
+
+---
+
+### 🧩 How It Works (Simplified Flow)
+1. A developer pushes new code to the GitHub repository.  
+2. GitHub Actions detects the update and triggers the pipeline.  
+3. Automated tests (unit, API, and integration tests) are run.  
+4. If all tests pass, Docker builds a new image of the backend app.  
+5. The updated application is deployed to the server or hosting platform automatically.  
+
+---
+
+### ✅ Benefits for the Airbnb Clone
+- Ensures **stable deployments** with minimal downtime.  
+- Detects and prevents bugs early through **automated testing**.  
+- Enables continuous improvement and feature delivery without breaking existing features.  
+
+---
+
+By integrating CI/CD, the Airbnb Clone backend becomes a **reliable, maintainable, and production-ready** system — following modern DevOps and engineering best practices.
+
+
+
 ## 👥 Team Roles
 
 ### 🧑🏽‍💻 Backend Developer
