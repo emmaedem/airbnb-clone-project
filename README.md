@@ -40,6 +40,116 @@ This project uses a combination of modern backend technologies to build a secure
 Together, these technologies power the Airbnb Clone backend — ensuring reliability, scalability, and smooth user experience.
 
 
+## 🗄️ Database Design
+
+The database is designed to store and manage all core data for the Airbnb Clone project — including users, properties, bookings, reviews, and payments.  
+Each entity is represented as a database table, with relationships connecting them to reflect real-world interactions between hosts, guests, and properties.
+
+---
+
+### 👤 Users
+Represents both guests and hosts on the platform.
+
+**Key Fields:**
+- `id`: Unique identifier for each user.
+- `name`: Full name of the user.
+- `email`: User’s email address (used for login/authentication).
+- `password`: Encrypted password.
+- `role`: Defines whether the user is a host or a guest.
+
+**Relationships:**
+- A **user** can list multiple **properties**.
+- A **user** can make multiple **bookings**.
+- A **user** can write multiple **reviews**.
+
+---
+
+### 🏠 Properties
+Represents the houses, apartments, or rooms listed by hosts.
+
+**Key Fields:**
+- `id`: Unique identifier for each property.
+- `user_id`: References the host (User who owns the property).
+- `title`: Name or short description of the property.
+- `location`: Address or city where the property is located.
+- `price_per_night`: Cost per night of stay.
+
+**Relationships:**
+- A **property** belongs to a **user** (host).
+- A **property** can have multiple **bookings**.
+- A **property** can have multiple **reviews**.
+
+---
+
+### 📅 Bookings
+Represents reservations made by users for specific properties.
+
+**Key Fields:**
+- `id`: Unique identifier for each booking.
+- `user_id`: References the guest who made the booking.
+- `property_id`: References the booked property.
+- `check_in_date`: Start date of the booking.
+- `check_out_date`: End date of the booking.
+
+**Relationships:**
+- A **booking** belongs to a **user** (guest).
+- A **booking** belongs to a **property**.
+- A **booking** may have one **payment** record.
+
+---
+
+### 💳 Payments
+Represents payment transactions related to bookings.
+
+**Key Fields:**
+- `id`: Unique identifier for each payment.
+- `booking_id`: References the related booking.
+- `amount`: Total payment amount.
+- `payment_status`: Indicates if the payment was successful or pending.
+- `payment_date`: When the payment was processed.
+
+**Relationships:**
+- A **payment** belongs to a **booking**.
+- A **booking** can have one **payment**.
+
+---
+
+### ⭐ Reviews
+Represents user feedback about properties.
+
+**Key Fields:**
+- `id`: Unique identifier for each review.
+- `user_id`: References the user who wrote the review.
+- `property_id`: References the property being reviewed.
+- `rating`: Numeric score (e.g., 1–5 stars).
+- `comment`: User’s written feedback.
+
+**Relationships:**
+- A **review** belongs to a **user**.
+- A **review** belongs to a **property**.
+
+---
+
+### 🔗 Entity Relationships Summary
+
+| Entity | Relationship |
+|---------|---------------|
+| User → Property | One-to-Many (A user can list multiple properties) |
+| User → Booking | One-to-Many (A user can make multiple bookings) |
+| Property → Booking | One-to-Many (A property can be booked multiple times) |
+| Booking → Payment | One-to-One (Each booking has one payment) |
+| Property → Review | One-to-Many (A property can have multiple reviews) |
+| User → Review | One-to-Many (A user can write multiple reviews) |
+
+---
+
+### 🧭 Summary
+This relational design ensures that:
+- Data remains organized and consistent.  
+- Relationships mirror real-world connections (guests, hosts, bookings, etc.).  
+- Queries for user bookings, property reviews, or payments can be made efficiently.
+
+
 
 ## 👥 Team Roles
 
