@@ -212,6 +212,82 @@ Uses token-based authentication (JWT) and password hashing to ensure users’ cr
 
 Each of these features works together to create a realistic, production-ready backend system that mirrors the core experience of Airbnb while demonstrating professional backend architecture and design.
 
+## 🔒 API Security
+
+Security is a top priority in the Airbnb Clone project to ensure that sensitive user data, payment details, and property information are protected from unauthorized access or misuse.  
+The backend implements multiple layers of security to maintain data integrity, confidentiality, and trust between users and the platform.
+
+---
+
+### 🧑🏽‍💻 Authentication
+Ensures that only registered users can access protected resources.  
+Implemented using **token-based authentication (JWT)** or Django’s built-in authentication system.  
+This prevents unauthorized users from performing actions like booking properties or viewing other users’ information.
+
+**Why it’s important:**  
+Protects user accounts and prevents data breaches caused by fake or unauthorized logins.
+
+---
+
+### 🔐 Authorization
+Determines what each authenticated user is allowed to do.  
+For example, a host can edit or delete their own property listings, but cannot modify someone else’s.  
+Guests can only make bookings or leave reviews for properties they’ve interacted with.
+
+**Why it’s important:**  
+Prevents misuse of privileges and ensures that users only access features relevant to their roles.
+
+---
+
+### 🚫 Rate Limiting
+Restricts the number of requests a client can make within a specific period.  
+This helps prevent abuse of API endpoints through excessive or automated requests.
+
+**Why it’s important:**  
+Protects the system from **Denial of Service (DoS)** attacks and ensures fair usage across all users.
+
+---
+
+### 🧱 Input Validation & Sanitization
+All incoming data from users (e.g., registration info, property details, reviews) is validated and cleaned before processing.  
+This includes checking for missing fields, invalid types, and preventing malicious inputs such as SQL injection or XSS attacks.
+
+**Why it’s important:**  
+Prevents hackers from injecting harmful data into the system and ensures the database remains stable and secure.
+
+---
+
+### 🔑 Data Encryption
+Sensitive data such as passwords and payment information are encrypted before being stored or transmitted.  
+Passwords are hashed using secure algorithms like **bcrypt**, while HTTPS ensures encrypted communication between the client and server.
+
+**Why it’s important:**  
+Prevents theft or exposure of private user and payment information, even if the database is compromised.
+
+---
+
+### 📦 Secure Deployment & Environment Variables
+Environment-specific configurations (like API keys, database credentials, and secret keys) are stored in **environment variables (.env files)** instead of hardcoding them in the codebase.  
+Docker containers are configured securely with limited permissions.
+
+**Why it’s important:**  
+Prevents accidental exposure of sensitive keys or credentials when pushing code to GitHub or deploying to production.
+
+---
+
+### 🧠 Summary
+| Security Area | Purpose |
+|----------------|----------|
+| Authentication | Ensures only verified users access the system |
+| Authorization | Controls user permissions and access levels |
+| Rate Limiting | Protects APIs from abuse and overload |
+| Input Validation | Prevents injection and data corruption |
+| Encryption | Secures sensitive data and communication |
+| Environment Variables | Keeps credentials safe and private |
+
+---
+
+Together, these security layers help safeguard the Airbnb Clone backend from common vulnerabilities and ensure a reliable, trustworthy experience for both hosts and guests.
 
 
 
