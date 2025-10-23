@@ -10,14 +10,35 @@ The Airbnb Clone backend project is built to replicate the essential features of
 - Create a **review and rating** system
 - Optimize data storage and retrieval
 
-## ⚙️ Tech Stack
-- **Backend Framework:** Django, Django REST Framework
-- **Database:** PostgreSQL
-- **Caching:** Redis
-- **Task Queue:** Celery
-- **Containerization:** Docker
-- **API Standards:** REST & GraphQL
-- **Version Control:** Git & GitHub
+## ⚙️ Technology Stack
+
+This project uses a combination of modern backend technologies to build a secure, scalable, and high-performing system for managing users, properties, bookings, and payments.
+
+### 🧱 Backend Framework
+**Django:** A powerful Python web framework used to build the main backend logic, handle routing, and manage data between the frontend and the database.
+
+### 🔌 API Layer
+**Django REST Framework (DRF):** Extends Django to easily create RESTful APIs — allowing the frontend to communicate with the backend using HTTP requests.  
+**GraphQL:** Provides a flexible way for clients to query and retrieve exactly the data they need from the backend.
+
+### 🗄️ Database
+**PostgreSQL:** A robust and reliable relational database used to store user data, property listings, bookings, and payment details. It ensures data consistency and supports advanced queries.
+
+### ⚙️ Task Management & Background Jobs
+**Celery:** Handles background tasks such as sending notifications or processing payments without slowing down the main application.  
+**Redis:** Works with Celery as a message broker and is also used for caching frequently requested data to improve performance.
+
+### 🐳 Containerization & Deployment
+**Docker:** Packages the application and all its dependencies into containers, ensuring the project runs consistently across different environments (local and cloud).  
+**CI/CD Pipelines:** Automates testing and deployment so that new code changes are safely released without manual intervention.
+
+### 🌐 API Documentation
+**OpenAPI / Swagger:** Automatically documents all API endpoints, making it easier for developers and testers to understand and interact with the backend.
+
+---
+
+Together, these technologies power the Airbnb Clone backend — ensuring reliability, scalability, and smooth user experience.
+
 
 
 ## 👥 Team Roles
