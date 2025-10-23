@@ -150,6 +150,70 @@ This relational design ensures that:
 - Queries for user bookings, property reviews, or payments can be made efficiently.
 
 
+## 🧩 Feature Breakdown
+
+The Airbnb Clone backend is designed to replicate the core functionality of the real Airbnb platform — allowing users to register, list properties, make bookings, handle payments, and leave reviews. Below is an overview of the main features and their contributions to the system.
+
+---
+
+### 👤 User Management
+Handles registration, authentication, and user profiles.  
+This feature allows users to sign up, log in, and manage their personal information securely. It also supports different user roles — such as guests who book properties and hosts who list them.
+
+---
+
+### 🏠 Property Management
+Enables hosts to create, update, and delete property listings.  
+Each property includes important details such as title, description, price, and location. This feature ensures guests can easily browse available listings and view complete property information.
+
+---
+
+### 📅 Booking System
+Allows users to book available properties and manage their reservations.  
+It handles checking availability, setting check-in and check-out dates, and preventing double bookings. This feature forms the backbone of the app’s reservation system.
+
+---
+
+### 💳 Payment Processing
+Facilitates secure and reliable payment transactions.  
+Integrates with payment gateways or simulated systems to handle booking payments. It records payment details and ensures that all financial transactions are linked to specific bookings.
+
+---
+
+### ⭐ Review and Rating System
+Lets users share their experiences by leaving reviews and ratings for properties they have stayed in.  
+This feature helps build trust within the platform and provides feedback for hosts to improve their listings.
+
+---
+
+### 📜 API Documentation
+All API endpoints are documented using the **OpenAPI** or **Swagger** standard.  
+This ensures developers and testers can easily understand how to interact with the backend, test API requests, and integrate with other systems.
+
+---
+
+### ⚙️ Admin & Data Management
+Provides admin-level tools for managing users, properties, and bookings.  
+Admins can view statistics, monitor transactions, and ensure smooth platform operations.
+
+---
+
+### 🚀 Scalability & Optimization
+Implements caching, indexing, and background tasks to improve performance and scalability.  
+Technologies like **Redis** and **Celery** are used to optimize response time and handle high traffic efficiently.
+
+---
+
+### 🔐 Security & Authentication
+Protects sensitive user data and system integrity.  
+Uses token-based authentication (JWT) and password hashing to ensure users’ credentials and personal information remain secure.
+
+---
+
+Each of these features works together to create a realistic, production-ready backend system that mirrors the core experience of Airbnb while demonstrating professional backend architecture and design.
+
+
+
 
 ## 👥 Team Roles
 
